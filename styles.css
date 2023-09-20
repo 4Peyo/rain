@@ -1,0 +1,35 @@
+/* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.lluvia {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.estrella-fugaz {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    animation: caida 2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes caida {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
